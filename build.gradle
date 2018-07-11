@@ -29,11 +29,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('javax.xml.bind:jaxb-api')
+    compile('com.google.guava:guava:25.1-jre')
 
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('org.postgresql:postgresql')
 
-    compileOnly('org.projectlombok:lombok')
+    compileOnly('org.projectlombok:lombok:1.18.0')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')
