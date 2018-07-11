@@ -81,7 +81,7 @@ public class Users {
   }
 
   @DeleteMapping("/{id}")
-  public AppUserResource updatePassword(@PathVariable("id") Integer id) {
+  public AppUserResource delete(@PathVariable("id") Integer id) {
     return AppUserResource.from(appUserService.deleteUser(id));
   }
 
