@@ -6,6 +6,8 @@ public interface AppUserDao extends AppDao<Integer, AppUser> {
 
   AppUser create(AppUser entity, String rawPassword);
 
+  AppUser updatePassword(Integer id, String rawPassword);
+
   @Override
   default AppUser create(AppUser entity) {
     throw new UnsupportedOperationException(

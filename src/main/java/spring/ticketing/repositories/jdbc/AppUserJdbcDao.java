@@ -115,4 +115,20 @@ public class AppUserJdbcDao implements AppUserDao, UserDetailsService {
         .authorities(data.get("rol").toString())
         .build();
   }
+
+  @Override
+  public AppUser updatePassword(Integer id, String rawPassword) {
+    String query = "UPDATE app_user SET password = ? WHERE id = ?";
+    int num = jdbc.update(
+        query,
+        passwordEncoder.encode(rawPassword),
+        id
+    );
+    if (num == 1) {
+      return getOne(id);
+    }
+    throw new IllegalStateException(
+        "The update operation must affect exactly one row. Rows affected " + num
+    );
+  }
 }
