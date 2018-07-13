@@ -30,6 +30,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('javax.xml.bind:jaxb-api')
     compile('com.google.guava:guava:25.1-jre')
+    compile('com.auth0:java-jwt:3.4.0')
+    compile('org.apache.commons:commons-lang3')
 
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('org.postgresql:postgresql')
